@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:Publication:2.0" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:Publication:2.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:Publication:2.0">
+      <s:element name="Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psFolderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentState" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Find">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eISHStatusgroup">
+        <s:restriction base="s:string">
+          <s:enumeration value="ISHReleasedStates" />
+          <s:enumeration value="ISHReleasedOrDraftStates" />
+          <s:enumeration value="ISHOutOfDateOrReleasedStates" />
+          <s:enumeration value="ISHNoStatusFilter" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="FindResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsReleased">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbOutIsReleased" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsReleasedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsReleasedResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbOutIsReleased" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="SetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapIn">
+    <wsdl:part name="parameters" element="tns:Find" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapOut">
+    <wsdl:part name="parameters" element="tns:FindResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMetaData" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsReleasedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsReleased" />
+  </wsdl:message>
+  <wsdl:message name="IsReleasedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsReleasedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Publication20Soap">
+    <wsdl:operation name="Create">
+      <wsdl:input message="tns:CreateSoapIn" />
+      <wsdl:output message="tns:CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input message="tns:DeleteSoapIn" />
+      <wsdl:output message="tns:DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData">
+      <wsdl:input message="tns:SetMetaDataSoapIn" />
+      <wsdl:output message="tns:SetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input message="tns:GetMetaDataSoapIn" />
+      <wsdl:output message="tns:GetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <wsdl:input message="tns:FindSoapIn" />
+      <wsdl:output message="tns:FindSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <wsdl:input message="tns:RetrieveMetaDataSoapIn" />
+      <wsdl:output message="tns:RetrieveMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsReleased">
+      <wsdl:input message="tns:IsReleasedSoapIn" />
+      <wsdl:output message="tns:IsReleasedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Publication20Soap" type="tns:Publication20Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Create">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/SetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/Find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/RetrieveMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsReleased">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/IsReleased" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Publication20Soap12" type="tns:Publication20Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Create">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/SetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/Find" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/RetrieveMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsReleased">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:Publication:2.0/IsReleased" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Publication20">
+    <wsdl:port name="Publication20Soap" binding="tns:Publication20Soap">
+      <soap:address location="http://trisoftcms4/InfoShareWS/Publication20.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Publication20Soap12" binding="tns:Publication20Soap12">
+      <soap12:address location="http://trisoftcms4/InfoShareWS/Publication20.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.exe.config
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.exe
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.pdb
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.xml
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.Esri_Trisoft_TopicStatus_Tool.resources
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.Resources.resources
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.vbproj.GenerateResource.Cache
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.exe
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.xml
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.pdb
+c:\users\wei7771\documents\visual studio 2012\Projects\Esri_Trisoft_TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.vbproj.ResolveComReference.cache

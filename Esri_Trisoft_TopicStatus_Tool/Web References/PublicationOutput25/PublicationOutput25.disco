@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://trisoftcms4/infoshareWS/PublicationOutput25.asmx?wsdl" docRef="http://trisoftcms4/infoshareWS/PublicationOutput25.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://trisoftcms4/infoshareWS/PublicationOutput25.asmx" xmlns:q1="urn:trisoft.be:WebServices:InfoShare:PublicationOutput:2.5" binding="q1:PublicationOutput25Soap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://trisoftcms4/infoshareWS/PublicationOutput25.asmx" xmlns:q2="urn:trisoft.be:WebServices:InfoShare:PublicationOutput:2.5" binding="q2:PublicationOutput25Soap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

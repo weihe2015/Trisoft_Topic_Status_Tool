@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0">
+      <s:element name="Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psFolderId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peISHType" type="tns:eISHType" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eISHType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ISHNone" />
+          <s:enumeration value="ISHMasterDoc" />
+          <s:enumeration value="ISHModule" />
+          <s:enumeration value="ISHIllustration" />
+          <s:enumeration value="ISHReusedObj" />
+          <s:enumeration value="ISHTemplate" />
+          <s:enumeration value="ISHLibrary" />
+          <s:enumeration value="ISHBaseline" />
+          <s:enumeration value="ISHPublication" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddShortCut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psToRefFolderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddShortCutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddShortCutResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveShortCut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psFromRefFolderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveShortCutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveShortCutResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psFolderId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peISHType" type="tns:eISHType" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psInitialState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOrUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOrUpdateResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminologyUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLanguages" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminologyUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminologyUpdateResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckOutResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEdt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckInResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UndoCheckOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UndoCheckOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UndoCheckOutResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentState" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Move">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psFromFolderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psToFolderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartTranslationMgmt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEventId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartTranslationMgmtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartTranslationMgmtResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEventId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLProductDef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocObjResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPossibleTransitionStates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutStatesList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPossibleTransitionStatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPossibleTransitionStatesResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutStatesList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInitialStates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peISHType" type="tns:eISHType" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutStatesList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInitialStatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInitialStatesResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutStatesList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Find">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psIshTypeFilter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eISHStatusgroup">
+        <s:restriction base="s:string">
+          <s:enumeration value="ISHReleasedStates" />
+          <s:enumeration value="ISHReleasedOrDraftStates" />
+          <s:enumeration value="ISHOutOfDateOrReleasedStates" />
+          <s:enumeration value="ISHNoStatusFilter" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="FindResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveObjects">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocIds" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLProductDef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveObjectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveObjectsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocIds" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrievebyIshLngRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLngRefs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLProductDef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbIncludeData" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrievebyIshLngRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrievebyIshLngRefResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveLatestVersionsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocIds" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLanguageFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolutionFilter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveLatestVersionsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveLatestVersionsInfoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvaluateDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXmlInDocument" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLProductDef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbValidateConditions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutDocument" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvaluateDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EvaluateDocumentResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutDocument" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartReuse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDocID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psIdToBeReused" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLReusedObj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartReuseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartReuseResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLReusedObj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddShortCutSoapIn">
+    <wsdl:part name="parameters" element="tns:AddShortCut" />
+  </wsdl:message>
+  <wsdl:message name="AddShortCutSoapOut">
+    <wsdl:part name="parameters" element="tns:AddShortCutResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveShortCutSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveShortCut" />
+  </wsdl:message>
+  <wsdl:message name="RemoveShortCutSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveShortCutResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdate" />
+  </wsdl:message>
+  <wsdl:message name="CreateOrUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="TerminologyUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:TerminologyUpdate" />
+  </wsdl:message>
+  <wsdl:message name="TerminologyUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:TerminologyUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOut" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckInSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckIn" />
+  </wsdl:message>
+  <wsdl:message name="CheckInSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckInResponse" />
+  </wsdl:message>
+  <wsdl:message name="UndoCheckOutSoapIn">
+    <wsdl:part name="parameters" element="tns:UndoCheckOut" />
+  </wsdl:message>
+  <wsdl:message name="UndoCheckOutSoapOut">
+    <wsdl:part name="parameters" element="tns:UndoCheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="SetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveSoapIn">
+    <wsdl:part name="parameters" element="tns:Move" />
+  </wsdl:message>
+  <wsdl:message name="MoveSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartTranslationMgmtSoapIn">
+    <wsdl:part name="parameters" element="tns:StartTranslationMgmt" />
+  </wsdl:message>
+  <wsdl:message name="StartTranslationMgmtSoapOut">
+    <wsdl:part name="parameters" element="tns:StartTranslationMgmtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocObjSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocObj" />
+  </wsdl:message>
+  <wsdl:message name="GetDocObjSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPossibleTransitionStatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPossibleTransitionStates" />
+  </wsdl:message>
+  <wsdl:message name="GetPossibleTransitionStatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPossibleTransitionStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInitialStatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInitialStates" />
+  </wsdl:message>
+  <wsdl:message name="GetInitialStatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInitialStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapIn">
+    <wsdl:part name="parameters" element="tns:Find" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapOut">
+    <wsdl:part name="parameters" element="tns:FindResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveObjectsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveObjects" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveObjectsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMetaData" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrievebyIshLngRefSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrievebyIshLngRef" />
+  </wsdl:message>
+  <wsdl:message name="RetrievebyIshLngRefSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrievebyIshLngRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLatestVersionsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveLatestVersionsInfo" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLatestVersionsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveLatestVersionsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvaluateDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:EvaluateDocument" />
+  </wsdl:message>
+  <wsdl:message name="EvaluateDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:EvaluateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartReuseSoapIn">
+    <wsdl:part name="parameters" element="tns:StartReuse" />
+  </wsdl:message>
+  <wsdl:message name="StartReuseSoapOut">
+    <wsdl:part name="parameters" element="tns:StartReuseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DocumentObj20Soap">
+    <wsdl:operation name="Create">
+      <wsdl:input message="tns:CreateSoapIn" />
+      <wsdl:output message="tns:CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input message="tns:DeleteSoapIn" />
+      <wsdl:output message="tns:DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateSoapIn" />
+      <wsdl:output message="tns:UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShortCut">
+      <wsdl:input message="tns:AddShortCutSoapIn" />
+      <wsdl:output message="tns:AddShortCutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShortCut">
+      <wsdl:input message="tns:RemoveShortCutSoapIn" />
+      <wsdl:output message="tns:RemoveShortCutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdate">
+      <wsdl:input message="tns:CreateOrUpdateSoapIn" />
+      <wsdl:output message="tns:CreateOrUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminologyUpdate">
+      <wsdl:input message="tns:TerminologyUpdateSoapIn" />
+      <wsdl:output message="tns:TerminologyUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <wsdl:input message="tns:CheckOutSoapIn" />
+      <wsdl:output message="tns:CheckOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <wsdl:input message="tns:CheckInSoapIn" />
+      <wsdl:output message="tns:CheckInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckOut">
+      <wsdl:input message="tns:UndoCheckOutSoapIn" />
+      <wsdl:output message="tns:UndoCheckOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData">
+      <wsdl:input message="tns:SetMetaDataSoapIn" />
+      <wsdl:output message="tns:SetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Move">
+      <wsdl:input message="tns:MoveSoapIn" />
+      <wsdl:output message="tns:MoveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartTranslationMgmt">
+      <wsdl:input message="tns:StartTranslationMgmtSoapIn" />
+      <wsdl:output message="tns:StartTranslationMgmtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocObj">
+      <wsdl:input message="tns:GetDocObjSoapIn" />
+      <wsdl:output message="tns:GetDocObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPossibleTransitionStates">
+      <wsdl:input message="tns:GetPossibleTransitionStatesSoapIn" />
+      <wsdl:output message="tns:GetPossibleTransitionStatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialStates">
+      <wsdl:input message="tns:GetInitialStatesSoapIn" />
+      <wsdl:output message="tns:GetInitialStatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input message="tns:GetMetaDataSoapIn" />
+      <wsdl:output message="tns:GetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <wsdl:input message="tns:FindSoapIn" />
+      <wsdl:output message="tns:FindSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveObjects">
+      <wsdl:input message="tns:RetrieveObjectsSoapIn" />
+      <wsdl:output message="tns:RetrieveObjectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <wsdl:input message="tns:RetrieveMetaDataSoapIn" />
+      <wsdl:output message="tns:RetrieveMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrievebyIshLngRef">
+      <wsdl:input message="tns:RetrievebyIshLngRefSoapIn" />
+      <wsdl:output message="tns:RetrievebyIshLngRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLatestVersionsInfo">
+      <wsdl:input message="tns:RetrieveLatestVersionsInfoSoapIn" />
+      <wsdl:output message="tns:RetrieveLatestVersionsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateDocument">
+      <wsdl:input message="tns:EvaluateDocumentSoapIn" />
+      <wsdl:output message="tns:EvaluateDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartReuse">
+      <wsdl:input message="tns:StartReuseSoapIn" />
+      <wsdl:output message="tns:StartReuseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DocumentObj20Soap" type="tns:DocumentObj20Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Create">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShortCut">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/AddShortCut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShortCut">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RemoveShortCut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdate">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/CreateOrUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminologyUpdate">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/TerminologyUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/CheckOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/CheckIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckOut">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/UndoCheckOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/SetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Move">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Move" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTranslationMgmt">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/StartTranslationMgmt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocObj">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetDocObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPossibleTransitionStates">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetPossibleTransitionStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialStates">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetInitialStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveObjects">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrieveObjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrieveMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievebyIshLngRef">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrievebyIshLngRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLatestVersionsInfo">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrieveLatestVersionsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateDocument">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/EvaluateDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartReuse">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/StartReuse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DocumentObj20Soap12" type="tns:DocumentObj20Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Create">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Create" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShortCut">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/AddShortCut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShortCut">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RemoveShortCut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdate">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/CreateOrUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminologyUpdate">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/TerminologyUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/CheckOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/CheckIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckOut">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/UndoCheckOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/SetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Move">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Move" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartTranslationMgmt">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/StartTranslationMgmt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocObj">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetDocObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPossibleTransitionStates">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetPossibleTransitionStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInitialStates">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetInitialStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/Find" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveObjects">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrieveObjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrieveMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievebyIshLngRef">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrievebyIshLngRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLatestVersionsInfo">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/RetrieveLatestVersionsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateDocument">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/EvaluateDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartReuse">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.0/StartReuse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentObj20">
+    <wsdl:port name="DocumentObj20Soap" binding="tns:DocumentObj20Soap">
+      <soap:address location="http://trisoftcms4/InfoShareWS/DocumentObj20.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocumentObj20Soap12" binding="tns:DocumentObj20Soap12">
+      <soap12:address location="http://trisoftcms4/InfoShareWS/DocumentObj20.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5">
+      <s:element name="GetMetaDataByIshLngRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plLngRef" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataByIshLngRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataByIshLngRefResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLogicalId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psResolution" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Find">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psIshTypeFilter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eISHStatusgroup">
+        <s:restriction base="s:string">
+          <s:enumeration value="ISHReleasedStates" />
+          <s:enumeration value="ISHReleasedOrDraftStates" />
+          <s:enumeration value="ISHOutOfDateOrReleasedStates" />
+          <s:enumeration value="ISHNoStatusFilter" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="FindResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasLogicalIds" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetrieveMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMetadataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetadataByIshLngRefs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="palLngRefs" type="tns:ArrayOfLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetrieveMetadataByIshLngRefsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMetadataByIshLngRefsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVersionMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasLogicalIds" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveVersionMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveVersionMetadataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveLanguageMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasLogicalIds" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="psVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasLanguages" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasResolutions" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eISHStatusgroup" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveLanguageMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveLanguageMetadataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataObjectInfoByIshLngRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plLngRef" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLIshDataObjects" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataObjectInfoByIshLngRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataObjectInfoByIshLngRefResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLIshDataObjects" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveDataObjectInfoByIshLngRefs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="palLngRefs" type="tns:ArrayOfLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLIshDataObjects" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveDataObjectInfoByIshLngRefsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveDataObjectInfoByIshLngRefsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLIshDataObjects" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FolderLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLogicalId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peOutBaseFolder" type="tns:eBaseFolder" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutFolderPath" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="palOutFolderRefs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eBaseFolder">
+        <s:restriction base="s:string">
+          <s:enumeration value="Data" />
+          <s:enumeration value="System" />
+          <s:enumeration value="Favorites" />
+          <s:enumeration value="EditorTemplate" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="FolderLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FolderLocationResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peOutBaseFolder" type="tns:eBaseFolder" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutFolderPath" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="palOutFolderRefs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetParents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLogicalId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLinkType" type="tns:eLinkType" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eLinkType">
+        <s:restriction base="s:string">
+          <s:enumeration value="ContentLink" />
+          <s:enumeration value="HyperLink" />
+          <s:enumeration value="All" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetParentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetParentsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetParentsByIshLngRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plLngRef" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLinkType" type="tns:eLinkType" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetParentsByIshLngRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetParentsByIshLngRefResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChildren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plLngRef" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLinkType" type="tns:eLinkType" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutLogicalIds" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChildrenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChildrenResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutLogicalIds" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMetaDataByIshLngRefSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaDataByIshLngRef" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataByIshLngRefSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataByIshLngRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapIn">
+    <wsdl:part name="parameters" element="tns:Find" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapOut">
+    <wsdl:part name="parameters" element="tns:FindResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMetadata" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetadataByIshLngRefsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMetadataByIshLngRefs" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetadataByIshLngRefsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMetadataByIshLngRefsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVersionMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveVersionMetadata" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveVersionMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveVersionMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLanguageMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveLanguageMetadata" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveLanguageMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveLanguageMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataObjectInfoByIshLngRefSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataObjectInfoByIshLngRef" />
+  </wsdl:message>
+  <wsdl:message name="GetDataObjectInfoByIshLngRefSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataObjectInfoByIshLngRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveDataObjectInfoByIshLngRefsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveDataObjectInfoByIshLngRefs" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveDataObjectInfoByIshLngRefsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveDataObjectInfoByIshLngRefsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FolderLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:FolderLocation" />
+  </wsdl:message>
+  <wsdl:message name="FolderLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:FolderLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetParentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetParents" />
+  </wsdl:message>
+  <wsdl:message name="GetParentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetParentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetParentsByIshLngRefSoapIn">
+    <wsdl:part name="parameters" element="tns:GetParentsByIshLngRef" />
+  </wsdl:message>
+  <wsdl:message name="GetParentsByIshLngRefSoapOut">
+    <wsdl:part name="parameters" element="tns:GetParentsByIshLngRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChildrenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChildren" />
+  </wsdl:message>
+  <wsdl:message name="GetChildrenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChildrenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DocumentObj25Soap">
+    <wsdl:operation name="GetMetaDataByIshLngRef">
+      <wsdl:input message="tns:GetMetaDataByIshLngRefSoapIn" />
+      <wsdl:output message="tns:GetMetaDataByIshLngRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input message="tns:GetMetaDataSoapIn" />
+      <wsdl:output message="tns:GetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <wsdl:input message="tns:FindSoapIn" />
+      <wsdl:output message="tns:FindSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetadata">
+      <wsdl:input message="tns:RetrieveMetadataSoapIn" />
+      <wsdl:output message="tns:RetrieveMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetadataByIshLngRefs">
+      <wsdl:input message="tns:RetrieveMetadataByIshLngRefsSoapIn" />
+      <wsdl:output message="tns:RetrieveMetadataByIshLngRefsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVersionMetadata">
+      <wsdl:input message="tns:RetrieveVersionMetadataSoapIn" />
+      <wsdl:output message="tns:RetrieveVersionMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLanguageMetadata">
+      <wsdl:input message="tns:RetrieveLanguageMetadataSoapIn" />
+      <wsdl:output message="tns:RetrieveLanguageMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataObjectInfoByIshLngRef">
+      <wsdl:input message="tns:GetDataObjectInfoByIshLngRefSoapIn" />
+      <wsdl:output message="tns:GetDataObjectInfoByIshLngRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDataObjectInfoByIshLngRefs">
+      <wsdl:input message="tns:RetrieveDataObjectInfoByIshLngRefsSoapIn" />
+      <wsdl:output message="tns:RetrieveDataObjectInfoByIshLngRefsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FolderLocation">
+      <wsdl:input message="tns:FolderLocationSoapIn" />
+      <wsdl:output message="tns:FolderLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParents">
+      <wsdl:input message="tns:GetParentsSoapIn" />
+      <wsdl:output message="tns:GetParentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParentsByIshLngRef">
+      <wsdl:input message="tns:GetParentsByIshLngRefSoapIn" />
+      <wsdl:output message="tns:GetParentsByIshLngRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildren">
+      <wsdl:input message="tns:GetChildrenSoapIn" />
+      <wsdl:output message="tns:GetChildrenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DocumentObj25Soap" type="tns:DocumentObj25Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMetaDataByIshLngRef">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetMetaDataByIshLngRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/Find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetadata">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetadataByIshLngRefs">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveMetadataByIshLngRefs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVersionMetadata">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveVersionMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLanguageMetadata">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveLanguageMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataObjectInfoByIshLngRef">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetDataObjectInfoByIshLngRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDataObjectInfoByIshLngRefs">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveDataObjectInfoByIshLngRefs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FolderLocation">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/FolderLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParents">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetParents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParentsByIshLngRef">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetParentsByIshLngRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildren">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetChildren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DocumentObj25Soap12" type="tns:DocumentObj25Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMetaDataByIshLngRef">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetMetaDataByIshLngRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/Find" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetadata">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetadataByIshLngRefs">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveMetadataByIshLngRefs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveVersionMetadata">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveVersionMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveLanguageMetadata">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveLanguageMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataObjectInfoByIshLngRef">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetDataObjectInfoByIshLngRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveDataObjectInfoByIshLngRefs">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/RetrieveDataObjectInfoByIshLngRefs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FolderLocation">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/FolderLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParents">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetParents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParentsByIshLngRef">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetParentsByIshLngRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildren">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:DocumentObj:2.5/GetChildren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentObj25">
+    <wsdl:port name="DocumentObj25Soap" binding="tns:DocumentObj25Soap">
+      <soap:address location="http://trisoftcms4/InfoShareWS/DocumentObj25.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocumentObj25Soap12" binding="tns:DocumentObj25Soap12">
+      <soap12:address location="http://trisoftcms4/InfoShareWS/DocumentObj25.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0">
+      <s:element name="GetLOVValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLOVName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutLOVValues" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLOVValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLOVValuesResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutLOVValues" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psLOVName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLLOV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLOVResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLLOV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psRightFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psUserGroupFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutUserNames" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutUserNames" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserGroups">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutUsergroup" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserGroupsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasOutUsergroup" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLOVValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLOVValues" />
+  </wsdl:message>
+  <wsdl:message name="GetLOVValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLOVValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserGroupsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserGroups" />
+  </wsdl:message>
+  <wsdl:message name="GetUserGroupsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserGroupsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MetaDataAssist20Soap">
+    <wsdl:operation name="GetLOVValues">
+      <wsdl:input message="tns:GetLOVValuesSoapIn" />
+      <wsdl:output message="tns:GetLOVValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOV">
+      <wsdl:input message="tns:GetLOVSoapIn" />
+      <wsdl:output message="tns:GetLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersSoapIn" />
+      <wsdl:output message="tns:GetUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroups">
+      <wsdl:input message="tns:GetUserGroupsSoapIn" />
+      <wsdl:output message="tns:GetUserGroupsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MetaDataAssist20Soap" type="tns:MetaDataAssist20Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLOVValues">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetLOVValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOV">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroups">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MetaDataAssist20Soap12" type="tns:MetaDataAssist20Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLOVValues">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetLOVValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOV">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetLOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroups">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:MetaDataAssist:2.0/GetUserGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MetaDataAssist20">
+    <wsdl:port name="MetaDataAssist20Soap" binding="tns:MetaDataAssist20Soap">
+      <soap:address location="http://trisoftcms4/InfoShareWS/MetaDataAssist20.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MetaDataAssist20Soap12" binding="tns:MetaDataAssist20Soap12">
+      <soap12:address location="http://trisoftcms4/InfoShareWS/MetaDataAssist20.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
