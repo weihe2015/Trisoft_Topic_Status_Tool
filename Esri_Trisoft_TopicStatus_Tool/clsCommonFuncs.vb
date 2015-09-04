@@ -44,6 +44,29 @@ Public Class clsCommonFuncs
         'FDESCRIPTION
     End Function
 
+    Public Function BuildFullTopicMetadata(ByVal Resolution As String) As StringBuilder
+        Dim requestedmeta As New StringBuilder
+        requestedmeta.Append("<ishfields>")
+        If Resolution <> "" Then
+            'requestedmeta.Append("<ishfield name=""FILLUSTRATOR"" level=""lng""/>")
+            requestedmeta.Append("<ishfield name=""FRESOLUTION"" level=""lng""/>")
+        End If
+
+        requestedmeta.Append("<ishfield name=""VERSION"" level=""version""/>")
+        requestedmeta.Append("<ishfield name=""MODIFIED-ON"" level=""lng""/>")
+        requestedmeta.Append("<ishfield name=""CREATED-ON"" level=""lng""/>")
+        requestedmeta.Append("<ishfield name=""FCOMMENTS"" level=""lng""/>")
+        requestedmeta.Append("<ishfield name=""FSTATUS"" level=""lng""/>")
+        requestedmeta.Append("<ishfield name=""DOC-LANGUAGE"" level=""lng""/>")
+        requestedmeta.Append("<ishfield name=""FAUTHOR"" level=""lng""/>")
+        requestedmeta.Append("<ishfield name=""FNOTRANSLATIONMGMT"" level=""logical""/>")
+        requestedmeta.Append("<ishfield name=""FTITLE"" level=""logical""/>")
+        requestedmeta.Append("<ishfield name=""FISHQUERY"" level=""logical""/>")
+        requestedmeta.Append("</ishfields>")
+        Return requestedmeta
+    End Function
+
+
     Public Function BuildMinEnMetadata(ByVal Resolution As String) As StringBuilder
         Dim requestedmeta As New StringBuilder
         requestedmeta.Append("<ishfields>")

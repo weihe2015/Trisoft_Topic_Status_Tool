@@ -59,31 +59,37 @@ Public Class mainAPIclass
         Dim baselineID As String = ""
         Dim baselinename As String
         Dim ishfields As XmlNode = VerDoc.SelectSingleNode("//ishfields")
-        baselinename = ishfields.SelectSingleNode("ishfield[@name='FISHBASELINE']").InnerText
-        'Pull the baseline info
-        oISHAPIObjs.ISHBaselineObj.GetBaselineId(Context, baselinename, baselineID)
-        oISHAPIObjs.ISHBaselineObj.GetReport(Context, baselineID, Nothing, Languages, Languages, Languages, Resolutions, outObjectList)
-        'Load the resulting baseline string as an xml document
         Dim baselineDoc As New XmlDocument
-        baselineDoc.LoadXml(outObjectList)
+        baselinename = ishfields.SelectSingleNode("ishfield[@name='FISHBASELINE']").InnerText
+        Try
+            'Pull the baseline info
+            oISHAPIObjs.ISHBaselineObj.GetBaselineId(Context, baselinename, baselineID)
+            oISHAPIObjs.ISHBaselineObj.GetReport(Context, baselineID, Nothing, Languages, Languages, Languages, Resolutions, outObjectList)
+            'Load the resulting baseline string as an xml documents
+            baselineDoc.LoadXml(outObjectList)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
         'for each object referenced, store the various info in an object and then store them in the hashSet.
         For Each baselineObject As XmlNode In baselineDoc.SelectNodes("/baseline/objects/object")
             Dim ishtype As String = baselineObject.Attributes.GetNamedItem("type").Value
             If ishtype = "ISHModule" Or ishtype = "ISHLibrary" Or ishtype = "ISHIllustration" Or ishtype = "ISHMasterDoc" Then
                 Dim refGuid As String = baselineObject.Attributes.GetNamedItem("ref").Value
                 Dim refver As String = baselineObject.Attributes.GetNamedItem("versionnumber").Value
+                Dim refSource As String = baselineObject.Attributes.GetNamedItem("source").Value
                 Dim refresolution As String = ""
                 If PubType = "Both Image and Topic" Then
                     If ishtype = "ISHModule" Or ishtype = "ISHLibrary" Or ishtype = "ISHIllustration" Or ishtype = "ISHMasterDoc" Then
-                        TopicGUID.Add(refGuid & "#" & refver & "#" & ishtype)
+                        TopicGUID.Add(refGuid & "#" & refver & "#" & ishtype & "#" & refSource)
                     End If
                 ElseIf PubType = "Image Only" Then
                     If ishtype = "ISHIllustration" Or ishtype = "ISHMasterDoc" Then
-                        TopicGUID.Add(refGuid & "#" & refver & "#" & ishtype)
+                        TopicGUID.Add(refGuid & "#" & refver & "#" & ishtype & "#" & refSource)
                     End If
                 Else
                     If ishtype = "ISHModule" Or ishtype = "ISHLibrary" Or ishtype = "ISHMasterDoc" Then
-                        TopicGUID.Add(refGuid & "#" & refver & "#" & ishtype)
+                        TopicGUID.Add(refGuid & "#" & refver & "#" & ishtype & "#" & refSource)
                     End If
                 End If
 
@@ -163,6 +169,19 @@ Public Class mainAPIclass
             'modErrorHandler.Errors.PrintMessage(2, "Error getting current state for " + GUID + "" + Version + "" + Language + ". Message: " + ex.Message.ToString, strModuleName + "-GetCurrentState")
             Return result
         End Try
+    End Function
+
+    Public Function GetFullStatus(ByVal GUID As String, ByVal Version As String, ByVal Resolution As String) As String
+        Dim requestmeta As StringBuilder = oCommonFuncs.BuildFullTopicMetadata(Resolution)
+        Dim OutXML As String = ""
+        Try
+            oISHAPIObjs.ISHDocObj.GetMetaData(Context, GUID, Version, "en", Resolution, requestmeta.ToString, OutXML)
+            Dim docInfo As New XmlDocument
+            docInfo.LoadXml(OutXML)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return ""
     End Function
 #End Region
 

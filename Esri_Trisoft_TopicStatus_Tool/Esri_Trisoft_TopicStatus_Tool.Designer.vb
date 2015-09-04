@@ -34,12 +34,15 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         Me.FolderBrowserDialog = New System.Windows.Forms.FolderBrowserDialog()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ViewLogFile = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(58, 50)
+        Me.Label1.Location = New System.Drawing.Point(47, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(315, 13)
         Me.Label1.TabIndex = 5
@@ -47,14 +50,14 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(59, 88)
+        Me.TextBox1.Location = New System.Drawing.Point(50, 114)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(431, 20)
         Me.TextBox1.TabIndex = 6
         '
         'Browse1
         '
-        Me.Browse1.Location = New System.Drawing.Point(575, 72)
+        Me.Browse1.Location = New System.Drawing.Point(575, 98)
         Me.Browse1.Name = "Browse1"
         Me.Browse1.Size = New System.Drawing.Size(109, 36)
         Me.Browse1.TabIndex = 7
@@ -64,7 +67,7 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(57, 143)
+        Me.Label2.Location = New System.Drawing.Point(47, 158)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(203, 13)
         Me.Label2.TabIndex = 8
@@ -72,14 +75,14 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(59, 187)
+        Me.TextBox2.Location = New System.Drawing.Point(50, 205)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(429, 20)
         Me.TextBox2.TabIndex = 9
         '
         'Browse2
         '
-        Me.Browse2.Location = New System.Drawing.Point(575, 171)
+        Me.Browse2.Location = New System.Drawing.Point(574, 189)
         Me.Browse2.Name = "Browse2"
         Me.Browse2.Size = New System.Drawing.Size(110, 36)
         Me.Browse2.TabIndex = 10
@@ -88,7 +91,8 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         '
         'Run
         '
-        Me.Run.Location = New System.Drawing.Point(61, 365)
+        Me.Run.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Run.Location = New System.Drawing.Point(50, 395)
         Me.Run.Name = "Run"
         Me.Run.Size = New System.Drawing.Size(134, 38)
         Me.Run.TabIndex = 11
@@ -97,7 +101,7 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         '
         'Open_Folder
         '
-        Me.Open_Folder.Location = New System.Drawing.Point(375, 365)
+        Me.Open_Folder.Location = New System.Drawing.Point(241, 395)
         Me.Open_Folder.Name = "Open_Folder"
         Me.Open_Folder.Size = New System.Drawing.Size(143, 38)
         Me.Open_Folder.TabIndex = 12
@@ -112,7 +116,7 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         '
         Me.CheckedListBox1.FormattingEnabled = True
         Me.CheckedListBox1.Items.AddRange(New Object() {"Both Image and Topic", "Image Only", "Topic Only"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(204, 275)
+        Me.CheckedListBox1.Location = New System.Drawing.Point(218, 296)
         Me.CheckedListBox1.Name = "CheckedListBox1"
         Me.CheckedListBox1.Size = New System.Drawing.Size(155, 64)
         Me.CheckedListBox1.TabIndex = 13
@@ -120,17 +124,50 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(58, 242)
+        Me.Label3.Location = New System.Drawing.Point(47, 266)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(276, 13)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Please select the topic type you want for the topic status:"
         '
+        'Label4
+        '
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.25!)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label4.Location = New System.Drawing.Point(12, 21)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(463, 41)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "This is Trisoft Topic Status Tool"
+        Me.Label4.UseWaitCursor = True
+        '
+        'ViewLogFile
+        '
+        Me.ViewLogFile.Location = New System.Drawing.Point(450, 395)
+        Me.ViewLogFile.Name = "ViewLogFile"
+        Me.ViewLogFile.Size = New System.Drawing.Size(129, 38)
+        Me.ViewLogFile.TabIndex = 16
+        Me.ViewLogFile.Text = "View Log File"
+        Me.ViewLogFile.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(616, 282)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(125, 78)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Esri_Trisoft_TopicStatus_Tool
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(769, 469)
+        Me.ClientSize = New System.Drawing.Size(824, 489)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ViewLogFile)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.Open_Folder)
@@ -159,5 +196,8 @@ Partial Class Esri_Trisoft_TopicStatus_Tool
     Friend WithEvents FolderBrowserDialog As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents CheckedListBox1 As System.Windows.Forms.CheckedListBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ViewLogFile As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

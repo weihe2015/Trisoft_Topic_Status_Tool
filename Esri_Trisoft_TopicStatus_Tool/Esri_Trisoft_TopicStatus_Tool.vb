@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports Excel = Microsoft.Office.Interop.Excel
 
 Public Class Esri_Trisoft_TopicStatus_Tool
     Public GUID As New ArrayList
@@ -29,15 +28,17 @@ Public Class Esri_Trisoft_TopicStatus_Tool
         Dim usrDir As String = Directory.GetCurrentDirectory
         Dim toolPropertyFile As String = usrDir & "\tool.properities"
         If Not File.Exists(toolPropertyFile) Then
-            MsgBox("Missing property file in user directory")
+            MsgBox("Missing property file in the folder: " & usrDir)
             Return
         End If
         Dim wholeProperty As String = My.Computer.FileSystem.ReadAllText(toolPropertyFile)
         Dim lineDataProperty() As String = Split(wholeProperty, vbNewLine)
 
-        For Each lineTextProperty As String In lineDataProperty
-            f_Properties.Add(lineTextProperty.Split("=")(0), lineTextProperty.Split("=")(1))
-        Next
+        If f_Properties.Count = 0 Then
+            For Each lineTextProperty As String In lineDataProperty
+                f_Properties.Add(lineTextProperty.Split("=")(0), lineTextProperty.Split("=")(1))
+            Next
+        End If
 
         Dim UserName As String = f_Properties.Item("USERNAME")
         Dim Password As String = f_Properties.Item("PASSWORD")
@@ -62,8 +63,6 @@ Public Class Esri_Trisoft_TopicStatus_Tool
         Dim fieldData() As String
         filePath = TextBox1.Text
         savePath = TextBox2.Text
-        'filePath = "C:\Users\wei7771\Desktop\TopicStatus_Tool\test.csv"
-        'savePath = "C:\Users\wei7771\Desktop\TopicStatus_Tool"
         Dim excelFileName = filePath.Substring(filePath.LastIndexOf("\") + 1)
 
         Dim Context As String = ""
@@ -94,6 +93,7 @@ Public Class Esri_Trisoft_TopicStatus_Tool
             Next lineOfText
         Else
             MessageBox.Show("The file path is empty.")
+            Return
         End If
 
         GUID.RemoveAt(GUID.Count - 1)
@@ -103,15 +103,14 @@ Public Class Esri_Trisoft_TopicStatus_Tool
             File.Create(Log_Path).Dispose()
         End If
 
-        Dim oExcel As Excel.Application
-        Dim oBook As Excel.Workbook
-        Dim oSheet As Excel.Worksheet
+        Dim oExcel As Object
+        Dim oBook As Object
+        Dim oSheet As Object
         'Start a new workbook in Excel.
         oExcel = CreateObject("Excel.Application")
         oBook = oExcel.Workbooks.Add
         'Add data to cells of the first worksheet in the new workbook.
-        oSheet = oBook.ActiveSheet
-        'oSheet = oBook.Worksheets(1)
+        oSheet = oBook.Worksheets(1)
         oSheet.Cells(1, 1).Value = "Pub GUID"
         oSheet.Cells(1, 2).Value = "Pub Name"
         oSheet.Cells(1, 3).Value = "Pub Version"
@@ -125,8 +124,8 @@ Public Class Esri_Trisoft_TopicStatus_Tool
         oSheet.Cells(1, 11).Value = "EN Release Date"
         oSheet.Cells(1, 12).Value = "Author"
         oSheet.Cells(1, 13).Value = "Enable L10N"
-        oSheet.Cells(1, 14).Value = "Translated Date"
-        oSheet.Cells(1, 15).Value = "In Translation Date"
+        oSheet.Cells(1, 14).Value = "In Translation Date"
+        oSheet.Cells(1, 15).Value = "Translated Date"
         oSheet.Cells(1, 16).Value = "Comments"
         Dim excelRow As Integer = 2
 
@@ -140,9 +139,9 @@ Public Class Esri_Trisoft_TopicStatus_Tool
             outputFileLang = lang
             test.GetStatus(id, name, version, reso, lang, PubType, savePath, Log_Path, excelRow, oSheet)
         Next
-        oSheet.Range("K1", "K" & excelRow).HorizontalAlignment = Excel.XlHAlign.xlHAlignRight
-        oSheet.Range("N1", "N" & excelRow).HorizontalAlignment = Excel.XlHAlign.xlHAlignRight
-        oSheet.Range("O1", "O" & excelRow).HorizontalAlignment = Excel.XlHAlign.xlHAlignRight
+        oSheet.Range("K1", "K" & excelRow).HorizontalAlignment = 3
+        oSheet.Range("N1", "N" & excelRow).HorizontalAlignment = 3
+        oSheet.Range("O1", "O" & excelRow).HorizontalAlignment = 3
         excelFileName = excelFileName.Replace(".csv", "_TopicStatus_" & outputFileLang.ToUpper() & ".xlsx")
         oSheet.Range("A1:P1").EntireColumn.AutoFit()
         oBook.SaveAs(savePath & "\" & excelFileName)
@@ -164,5 +163,50 @@ Public Class Esri_Trisoft_TopicStatus_Tool
                 End If
             Next
         End If
+    End Sub
+
+    Private Sub Open_Folder_Click(sender As Object, e As EventArgs) Handles Open_Folder.Click
+        Dim openDir As String = TextBox2.Text
+        If Not String.IsNullOrEmpty(openDir) Then
+            Process.Start("Explorer.exe", openDir)
+        End If
+    End Sub
+
+
+    Private Sub ViewLogFile_Click(sender As Object, e As EventArgs) Handles ViewLogFile.Click
+        Dim File_Name As String = TextBox2.Text & "\log.txt"
+        If System.IO.File.Exists(File_Name) = True Then
+            Process.Start(File_Name)
+        Else
+            MsgBox("Log File Does not Exist")
+            Return
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim usrDir As String = Directory.GetCurrentDirectory
+        Dim toolPropertyFile As String = usrDir & "\tool.properities"
+        If Not File.Exists(toolPropertyFile) Then
+            MsgBox("Missing property file in the folder: " & usrDir)
+            Return
+        End If
+        Dim wholeProperty As String = My.Computer.FileSystem.ReadAllText(toolPropertyFile)
+        Dim lineDataProperty() As String = Split(wholeProperty, vbNewLine)
+
+        If f_Properties.Count = 0 Then
+            For Each lineTextProperty As String In lineDataProperty
+                f_Properties.Add(lineTextProperty.Split("=")(0), lineTextProperty.Split("=")(1))
+            Next
+        End If
+
+        Dim UserName As String = f_Properties.Item("USERNAME")
+        Dim Password As String = f_Properties.Item("PASSWORD")
+        Dim URL As String = f_Properties.Item("HOMEURL")
+
+        Dim Context As String = ""
+        Dim testobj As New IshObjs(UserName, Password, URL)
+        testobj.ISHAppObj.Login("InfoShareAuthor", UserName, Password, Context)
+        Dim test As New IshPubOutput(UserName, Password, URL)
+        test.GetTest()
     End Sub
 End Class

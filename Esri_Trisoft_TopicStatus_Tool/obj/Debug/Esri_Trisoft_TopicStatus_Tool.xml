@@ -6,19 +6,280 @@ Esri_Trisoft_TopicStatus_Tool
 </name>
 </assembly>
 <members>
-<member name="P:Esri_Trisoft_TopicStatus_Tool.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
+<member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.#ctor">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRefCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRefCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FindCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadataCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefsCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRefCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocationCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ContainingCompleted">
+	<remarks/>
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaselineCompleted">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.Release(System.String@,System.String,System.String,System.String,System.String,System.String@,System.Boolean@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRef(System.String@,System.Int64,System.String@,System.Boolean@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRefAsync(System.String,System.Int64,System.String,System.Boolean)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRefAsync(System.String,System.Int64,System.String,System.Boolean,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRef(System.String@,System.Int64,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRefAsync(System.String,System.Int64,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRefAsync(System.String,System.Int64,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaData(System.String@,System.String,System.String@,System.String,System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.Find(System.String@,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadata(System.String@,System.String[],Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataAsync(System.String,System.String[],Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataAsync(System.String,System.String[],Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadata(System.String@,System.String[],System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadataAsync(System.String,System.String[],System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadataAsync(System.String,System.String[],System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefs(System.String@,System.Int64[],System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefsAsync(System.String,System.Int64[],System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefsAsync(System.String,System.Int64[],System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRef(System.String@,System.Int64,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRefAsync(System.String,System.Int64,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRefAsync(System.String,System.Int64,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRef(System.String@,System.Int64,System.String,System.Int64@,System.Int32@,System.Byte[]@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRefAsync(System.String,System.Int64,System.String,System.Int64,System.Int32,System.Byte[])">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRefAsync(System.String,System.Int64,System.String,System.Int64,System.Int32,System.Byte[],System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocation(System.String@,System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder@,System.String[]@,System.Int64[]@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocationAsync(System.String,System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder,System.String[],System.Int64[])">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocationAsync(System.String,System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder,System.String[],System.Int64[],System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.Containing(System.String@,System.String,System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ContainingAsync(System.String,System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ContainingAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaseline(System.String@,System.String,System.String,System.String@)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaselineAsync(System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaselineAsync(System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHReleasedStates">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHReleasedOrDraftStates">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHOutOfDateOrReleasedStates">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHNoStatusFilter">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.Data">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.System">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.Favorites">
+	<remarks/>
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.EditorTemplate">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.psOutXMLBaselineFreezeReport">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.pbOutIsFrozen">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.psOutXMLBaselineFreezeReport">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.pbOutIsFrozen">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.psVersion">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs.psOutXMLIshDataObjects">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.plOffSet">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.piSize">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.pbOutBytes">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.peOutBaseFolder">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.pasOutFolderPath">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.palOutFolderRefs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs">
+	<remarks/>
 </member><member name="M:Esri_Trisoft_TopicStatus_Tool.Baseline25.BaseLine25.#ctor">
 	<remarks/>
 </member><member name="E:Esri_Trisoft_TopicStatus_Tool.Baseline25.BaseLine25.RetrieveMetaDataCompleted">
@@ -683,75 +944,162 @@ Esri_Trisoft_TopicStatus_Tool
 	<remarks/>
 </member><member name="T:Esri_Trisoft_TopicStatus_Tool.DocumentObj25.GetChildrenCompletedEventArgs">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.#ctor">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.#ctor">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValuesCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CreateCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.DeleteCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsersCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaDataCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroupsCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaDataCompleted">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValues(System.String,System.String,System.String[]@)">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.FindCompleted">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValuesAsync(System.String,System.String,System.String[])">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaDataCompleted">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValuesAsync(System.String,System.String,System.String[],System.Object)">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleasedCompleted">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOV(System.String,System.String,System.String@)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.Create(System.String@,System.String,System.String@,System.String@,System.String)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVAsync(System.String,System.String,System.String)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CreateAsync(System.String,System.String,System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVAsync(System.String,System.String,System.String,System.Object)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CreateAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsers(System.String,System.String,System.String,System.String[]@)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.Delete(System.String@,System.String,System.String)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsersAsync(System.String,System.String,System.String,System.String[])">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.DeleteAsync(System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsersAsync(System.String,System.String,System.String,System.String[],System.Object)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.DeleteAsync(System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroups(System.String,System.String[]@)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaData(System.String@,System.String,System.String@,System.String,System.String)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroupsAsync(System.String,System.String[])">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaDataAsync(System.String,System.String,System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroupsAsync(System.String,System.String[],System.Object)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.CancelAsync(System.Object)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaData(System.String@,System.String,System.String@,System.String,System.String@)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventHandler">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventArgs.Result">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.Find(System.String@,Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup,System.String,System.String,System.String@)">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventArgs.psOutLOVValues">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup,System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventArgs">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup,System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventHandler">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaData(System.String@,System.String,System.String,System.String,System.String@)">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventArgs.Result">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaDataAsync(System.String,System.String,System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventArgs.psOutXMLLOV">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventArgs">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleased(System.String@,System.String,System.String,System.Boolean@)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventHandler">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleasedAsync(System.String,System.String,System.String,System.Boolean)">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventArgs.Result">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleasedAsync(System.String,System.String,System.String,System.Boolean,System.Object)">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventArgs.pasOutUserNames">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CancelAsync(System.Object)">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventArgs">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventHandler">
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHReleasedStates">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventArgs.Result">
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHReleasedOrDraftStates">
 	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventArgs.pasOutUsergroup">
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHOutOfDateOrReleasedStates">
 	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventArgs">
+</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHNoStatusFilter">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.psDocId">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.psVersion">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs.psVersion">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.psVersion">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs.psOutXMLObjList">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs.psAuthContext">
+	<remarks/>
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs.pbOutIsReleased">
+	<remarks/>
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs">
 	<remarks/>
 </member><member name="M:Esri_Trisoft_TopicStatus_Tool.DocumentObj20.DocumentObj20.#ctor">
 	<remarks/>
@@ -1223,150 +1571,6 @@ Esri_Trisoft_TopicStatus_Tool
 	<remarks/>
 </member><member name="T:Esri_Trisoft_TopicStatus_Tool.DocumentObj20.StartReuseCompletedEventArgs">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.#ctor">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CreateCompleted">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.DeleteCompleted">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaDataCompleted">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaDataCompleted">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.FindCompleted">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaDataCompleted">
-	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleasedCompleted">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.Create(System.String@,System.String,System.String@,System.String@,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CreateAsync(System.String,System.String,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CreateAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.Delete(System.String@,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.DeleteAsync(System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.DeleteAsync(System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaData(System.String@,System.String,System.String@,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaDataAsync(System.String,System.String,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.SetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaData(System.String@,System.String,System.String@,System.String,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.Find(System.String@,Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup,System.String,System.String,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaData(System.String@,System.String,System.String,System.String,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaDataAsync(System.String,System.String,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.RetrieveMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleased(System.String@,System.String,System.String,System.Boolean@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleasedAsync(System.String,System.String,System.String,System.Boolean)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.IsReleasedAsync(System.String,System.String,System.String,System.Boolean,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20.CancelAsync(System.Object)">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.Publication20">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHReleasedStates">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHReleasedOrDraftStates">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHOutOfDateOrReleasedStates">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup.ISHNoStatusFilter">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.eISHStatusgroup">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.psDocId">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs.psVersion">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.CreateCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.DeleteCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs.psVersion">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.SetMetaDataCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.psVersion">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.GetMetaDataCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.FindCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.RetrieveMetaDataCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs.pbOutIsReleased">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.Publication20.IsReleasedCompletedEventArgs">
-	<remarks/>
 </member><member name="M:Esri_Trisoft_TopicStatus_Tool.Application20.Application20.#ctor">
 	<remarks/>
 </member><member name="E:Esri_Trisoft_TopicStatus_Tool.Application20.Application20.LoginCompleted">
@@ -1483,279 +1687,75 @@ Esri_Trisoft_TopicStatus_Tool
 	<remarks/>
 </member><member name="T:Esri_Trisoft_TopicStatus_Tool.Application20.ChangePasswordCompletedEventArgs">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.#ctor">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.#ctor">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValuesCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRefCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRefCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsersCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataCompleted">
+</member><member name="E:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroupsCompleted">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FindCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValues(System.String,System.String,System.String[]@)">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValuesAsync(System.String,System.String,System.String[])">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadataCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVValuesAsync(System.String,System.String,System.String[],System.Object)">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefsCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOV(System.String,System.String,System.String@)">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRefCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVAsync(System.String,System.String,System.String)">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetLOVAsync(System.String,System.String,System.String,System.Object)">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocationCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsers(System.String,System.String,System.String,System.String[]@)">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ContainingCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsersAsync(System.String,System.String,System.String,System.String[])">
 	<remarks/>
-</member><member name="E:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaselineCompleted">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUsersAsync(System.String,System.String,System.String,System.String[],System.Object)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.Release(System.String@,System.String,System.String,System.String,System.String,System.String@,System.Boolean@)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroups(System.String,System.String[]@)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroupsAsync(System.String,System.String[])">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.GetUserGroupsAsync(System.String,System.String[],System.Object)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRef(System.String@,System.Int64,System.String@,System.Boolean@)">
+</member><member name="M:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20.CancelAsync(System.Object)">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRefAsync(System.String,System.Int64,System.String,System.Boolean)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.MetaDataAssist20">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ReleaseByIshLngRefAsync(System.String,System.Int64,System.String,System.Boolean,System.Object)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventHandler">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRef(System.String@,System.Int64,System.String,System.String@)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventArgs.Result">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRefAsync(System.String,System.Int64,System.String,System.String)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventArgs.psOutLOVValues">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataByIshLngRefAsync(System.String,System.Int64,System.String,System.String,System.Object)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVValuesCompletedEventArgs">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaData(System.String@,System.String,System.String@,System.String,System.String,System.String,System.String@)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventHandler">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventArgs.Result">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetMetaDataAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventArgs.psOutXMLLOV">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.Find(System.String@,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String@)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetLOVCompletedEventArgs">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventHandler">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FindAsync(System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String,System.Object)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventArgs.Result">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadata(System.String@,System.String[],Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String@)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventArgs.pasOutUserNames">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataAsync(System.String,System.String[],Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUsersCompletedEventArgs">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataAsync(System.String,System.String[],Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup,System.String,System.String,System.String,System.Object)">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventHandler">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadata(System.String@,System.String[],System.String,System.String,System.String@)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventArgs.Result">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadataAsync(System.String,System.String[],System.String,System.String,System.String)">
+</member><member name="P:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventArgs.pasOutUsergroup">
 	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveVersionMetadataAsync(System.String,System.String[],System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefs(System.String@,System.Int64[],System.String,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefsAsync(System.String,System.Int64[],System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.RetrieveMetadataByIshLngRefsAsync(System.String,System.Int64[],System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRef(System.String@,System.Int64,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRefAsync(System.String,System.Int64,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetDataObjectInfoByIshLngRefAsync(System.String,System.Int64,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRef(System.String@,System.Int64,System.String,System.Int64@,System.Int32@,System.Byte[]@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRefAsync(System.String,System.Int64,System.String,System.Int64,System.Int32,System.Byte[])">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.GetNextDataObjectChunkByIshLngRefAsync(System.String,System.Int64,System.String,System.Int64,System.Int32,System.Byte[],System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocation(System.String@,System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder@,System.String[]@,System.Int64[]@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocationAsync(System.String,System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder,System.String[],System.Int64[])">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.FolderLocationAsync(System.String,System.String,Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder,System.String[],System.Int64[],System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.Containing(System.String@,System.String,System.String,System.String,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ContainingAsync(System.String,System.String,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.ContainingAsync(System.String,System.String,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaseline(System.String@,System.String,System.String,System.String@)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaselineAsync(System.String,System.String,System.String,System.String)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.UsingBaselineAsync(System.String,System.String,System.String,System.String,System.Object)">
-	<remarks/>
-</member><member name="M:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25.CancelAsync(System.Object)">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.PublicationOutput25">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHReleasedStates">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHReleasedOrDraftStates">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHOutOfDateOrReleasedStates">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup.ISHNoStatusFilter">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eISHStatusgroup">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.Data">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.System">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.Favorites">
-	<remarks/>
-</member><member name="F:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder.EditorTemplate">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.eBaseFolder">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.psOutXMLBaselineFreezeReport">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs.pbOutIsFrozen">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.psOutXMLBaselineFreezeReport">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs.pbOutIsFrozen">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ReleaseByIshLngRefCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataByIshLngRefCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.psVersion">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetMetaDataCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FindCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveVersionMetadataCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.RetrieveMetadataByIshLngRefsCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs.psOutXMLIshDataObjects">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetDataObjectInfoByIshLngRefCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.plOffSet">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.piSize">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs.pbOutBytes">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.GetNextDataObjectChunkByIshLngRefCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.peOutBaseFolder">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.pasOutFolderPath">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs.palOutFolderRefs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.FolderLocationCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.ContainingCompletedEventArgs">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventHandler">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs.Result">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs.psAuthContext">
-	<remarks/>
-</member><member name="P:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs.psOutXMLObjList">
-	<remarks/>
-</member><member name="T:Esri_Trisoft_TopicStatus_Tool.PublicationOutput25.UsingBaselineCompletedEventArgs">
+</member><member name="T:Esri_Trisoft_TopicStatus_Tool.MetaDataAssist20.GetUserGroupsCompletedEventArgs">
 	<remarks/>
 </member>
 </members>

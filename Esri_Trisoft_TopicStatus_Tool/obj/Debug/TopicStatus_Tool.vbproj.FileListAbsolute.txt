@@ -21,3 +21,14 @@ D:\d\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_Topic
 D:\d\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.Esri_Trisoft_TopicStatus_Tool.resources
 D:\d\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.Resources.resources
 D:\d\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\TopicStatus_Tool.vbproj.GenerateResource.Cache
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.exe.config
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\TopicStatus_Tool.vbproj.ResolveComReference.cache
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.exe
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.xml
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.pdb
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.exe
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.pdb
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\bin\Debug\Esri_Trisoft_TopicStatus_Tool.xml
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.Esri_Trisoft_TopicStatus_Tool.resources
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\Esri_Trisoft_TopicStatus_Tool.Resources.resources
+D:\a\TopicStatus_Tool\Esri_Trisoft_TopicStatus_Tool\obj\Debug\TopicStatus_Tool.vbproj.GenerateResource.Cache
